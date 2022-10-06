@@ -10,7 +10,7 @@ app.set('view engine', 'hbs');
 hbs.registerPartials( __dirname + '/views/partials' );
 
 // Servir contenido estático en la home page. Express lo hará de forma predeterminada en el archivo index.html que encuentre dentro del path "public" o el que le ingresemos
-app.use( express.static('public') ); // la carpeta pública tiene prioridad sobre las rutas que se definan en el código 
+app.use( express.static('public') ); // la carpeta pública tiene prioridad sobre las rutas que se definan en el código. Aquí es donde podemos agregar nuestras aplicaciones de Angular o React, es decir, las agregamos como contenido estático.
 
 // Este ya no se ejecuta porque se sirvió contenido estático (se ejecutó el middleware):
 // app.get('/', (req, res) => {
